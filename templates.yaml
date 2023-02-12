@@ -1,0 +1,13 @@
+- sensor:
+    - name: "Fitbit - Loryan"
+      unique_id: fitbit_loryan
+      state: >-
+      attributes:
+        activeminutesactual: >
+            {{ state_attr('sensor.fitbit_azurelogicapp', 'loryan')['activeminutesactual'] }}
+        activeminutesgoal: >
+            {{ state_attr('sensor.fitbit_azurelogicapp', 'loryan')['activeminutesgoal'] }}
+        stepsactual: >
+            {{ state_attr('sensor.fitbit_azurelogicapp', 'loryan')['stepsactual'] }}
+        stepsgoal: >
+            {{ state_attr('sensor.fitbit_azurelogicapp', 'loryan')['stepsgoal'] }}
