@@ -1,0 +1,11 @@
+  - platform: rest
+    name: fitbit_azurelogicapp
+    resource: <YOUR Azure Logic App trigger URL>
+    scan_interval: 1800
+    value_template: "OK"
+    json_attributes:
+      - chloe
+      - holly
+      - loryan
+      - lastupdate
+      - megan
