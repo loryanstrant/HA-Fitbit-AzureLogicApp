@@ -1,0 +1,45 @@
+swagger: '2.0'
+info:
+  title: Fitbit
+  description: ''
+  version: '1.0'
+host: api.fitbit.com
+basePath: /
+schemes:
+  - https
+consumes: []
+produces: []
+paths:
+  /1/user/{user-id}/activities/date/{date}.json:
+    get:
+      responses:
+        default:
+          description: default
+          schema: {}
+      summary: Get today activity
+      operationId: GetTodayActivity
+      description: ''
+      parameters:
+        - name: user-id
+          in: path
+          required: true
+          type: string
+        - name: date
+          in: path
+          required: true
+          type: string
+definitions: {}
+parameters: {}
+responses: {}
+securityDefinitions:
+  oauth2-auth:
+    type: oauth2
+    flow: accessCode
+    authorizationUrl: https://www.fitbit.com/oauth2/authorize
+    tokenUrl: https://login.windows.net/common/oauth2/authorize
+    scopes:
+      activity: activity
+security:
+  - oauth2-auth:
+      - activity
+tags: []
