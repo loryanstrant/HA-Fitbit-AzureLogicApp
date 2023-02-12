@@ -1,0 +1,30 @@
+  - type: custom:dual-gauge-card
+    title: Steps
+    outer:
+      entity: sensor.fitbit_loryan
+      attribute: stepsgoal
+      label: Goal
+    inner:
+      entity: sensor.fitbit_loryan
+      attribute: stepsactual
+      label: Actual
+    min: 0
+    max: 8000
+    colors:
+      - color: rgb(234,105,83)
+        value: 50
+  - type: custom:dual-gauge-card
+    title: Activity
+    outer:
+      entity: sensor.fitbit_loryan
+      attribute: activeminutesgoal
+      label: Goal
+    inner:
+      entity: sensor.fitbit_loryan
+      attribute: activeminutesactual
+      label: Actual
+    min: 0
+    max: 30
+    colors:
+      - color: rgb(234,105,83)
+        value: 50
